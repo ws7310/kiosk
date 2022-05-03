@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/mycss.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="wrap">
+        <!--헤더-->
+        <header>
+          <div class="logoimg">
+            <img src="img/logo.png" id="logo" alt="로고">
+          </div>
+          <nav>
+            <ul id="topmenu">
+              <li><a href="#">홈</a></li>
+              <li><a href="#">공지사항</a>
+                <ul>
+                  <li><a href="#">이벤트 안내</a></li>
+                  <li><a href="#">기업 소개</a></li>
+                </ul>
+              </li>
+              <li><a href="#">메뉴판</a>
+                <ul>
+                  <li><a href="#">식사 메뉴</a></li>
+                  <li><a href="#">기타 메뉴</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <!--섹션-->
+        <main>
+          <!-- 탭메뉴 -->
+          <section id="tabMenu">
+              <input type="radio" id="tab1" name="tab" checked>
+              <label for="tab1">면</label>
+              <input type="radio" id="tab2" name="tab">
+              <label for="tab2">밥    </label>
+              <input type="radio" id="tab3" name="tab">
+              <label for="tab3">음료    </label>
+  
+              <div id="noodle" class="tab">
+                  <ul>
+                      <li><img src="img\noodle1.jpg"  width="250px" onclick="plus1(1,4000)"><div class="caption">
+                        <p>기본에 충실하고 가장 인기있는 국수</p>
+                      </div><p><button onclick="plus1(1,4000);">+</button> 잔치국수 4,000원 <button onclick="minus1(1,4000);">-</button></p></li>
+                      <li><img src="img\noodle2.jpg"  width="250px" onclick="plus2(1,5500);"><div class="caption">
+                        <p>매콤달콤 한번먹으면 빠져드는 비빔국수</p>
+                      </div><p><button onclick="plus2(1,5500);">+</button> 비빔국수 5,500원 <button onclick="minus2(1,5500);">-</button></p></li><br>
+                      <li><img src="img\noodle3.jpg"  width="250px" onclick="plus3(1,5000);"><div class="caption">
+                        <p>깔끔하고 담백한 육수가 가득한 냉면</p>
+                      </div><p><button onclick="plus3(1,5000);">+</button> 냉면 5,000원 <button onclick="minus3(1,5000);">-</button></p></li>
+                      <li><img src="img\noodle4.jpg"  width="250px" onclick="plus4(1,5500);"><div id="capcenter" class="caption">
+                        <p>간장과 참기름이 들어간 고소한 국수</p>
+                      </div><p><button onclick="plus4(1,5500);">+</button> 간장비빔국수 5,500원 <button onclick="minus4(1,5500);">-</button></p></li>
+                      <li><img src="img\noodle5.jpg"  width="250px" onclick="plus5(1,5000);"><div class="caption">
+                        <p>최상급 사누끼면과 장인의 쯔유의 만남</p>
+                      </div><p><button onclick="plus5(1,5000);">+</button> 우동 5,000원 <button onclick="minus5(1,5000);">-</button></p></li>
+                  </ul>
+              </div>
+              <div id="rice" class="tab">
+                  <ul>
+                      <li><img src="img\rice1.jpg"  width="250px" onclick="plus6(1,6000);"><div class="caption">
+                        <p>불고기와 단짠단짠 특제소스의 조화!</p>
+                      </div><p><button onclick="plus6(1,6000);">+</button> 불고기 덮밥 6,000원 <button onclick="minus6(1,6000);">-</button></p></li>
+                      <li><img src="img\rice2.jpg"  width="250px" onclick="plus7(1,6000);"><div class="caption">
+                        <p>매콤하고 두툼한 제육을 가득넣은 덮밥!</p>
+                      </div><p><button onclick="plus7(1,6000);">+</button> 제육 덮밥 6,000원 <button onclick="minus7(1,6000);">-</button></p></li>
+                      <li><img src="img\rice3.jpg"  width="250px" onclick="plus8(1,2000);"><div class="caption">
+                        <p>고소한 참치와 마요네즈가 들어간 주먹밥</p>
+                      </div><p><button onclick="plus8(1,2000);">+</button> 참치 주먹밥 2,000원 <button onclick="minus8(1,2000);">-</button></p></li>
+                  </ul>
+              </div>
+              <div id="juice" class="tab">
+                  <ul>
+                      <li><img src="img\drink1.jpg"  width="200px" onclick="plus9(1,1500);"><p><button onclick="plus9(1,1500);">+</button> 코카콜라 1,500원 <button onclick="minus9(1,1500);">-</button></p></li>
+                      <li><img src="img\drink2.jpg"  width="200px" onclick="plus10(1,1500);"><p><button onclick="plus10(1,1500);">+</button> 스프라이트 1,500원 <button onclick="minus10(1,1500);">-</button></p></li>
+                      <li><img src="img\drink3.jpg"  width="200px" onclick="plus11(1,1500);"><p><button onclick="plus11(1,1500);">+</button> 환타 1,500원 <button onclick="minus11(1,1500);">-</button></p></li>
+                  </ul>
+              </div>
+          </section>
+          
+          <!-- 선택 합계 -->
+      <section id="basket">
+          <h1>주문 내역</h1>
+          <div id="order"></div>
+          <div id="order1"></div>
+          <div id="order2"></div>
+          <div id="order3"></div>
+          <div id="order4"></div>
+          <div id="order5"></div>
+          <div id="order6"></div>
+          <div id="order7"></div>
+          <div id="order8"></div>
+          <div id="order9"></div>
+          <div id="order10"></div>
+          <div id="order11"></div>
+          <div id="total"></div>
+          <button id="on" class="" onclick="ordercom();">주문하기</button>
+          <button id="off" class="reset" onclick="reset();">취소하기</button>
+          <script src="js/myjs.js"></script>
+      </section>
+      </main>
+      <!--푸터-->
+      <footer>
+        <br/>
+        <p>COPYRIGHT Team 비전공</p>
+        <div class="sns">
+          <img src="img/face1.png">
+          <img src="img/insta1.png">
+          <img src="img/twit1.png">
+          <img src="img/yotube1.png">
+        </div>
+      </footer>
+  </div>
+  <script src="js/myjs.js"></script>
+</body>
+</html>

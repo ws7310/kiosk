@@ -1,0 +1,225 @@
+/* 초기화 */
+* { 
+  list-style: none;
+  text-decoration: none;
+  margin: 0; padding: 0;
+  font-family: 'Yeon Sung', cursive;
+  font-size: 25px;
+  color: black;
+}
+body {
+  background-image: url('../img/back.png');
+}
+
+  #logo {
+    width: 150px; height: 100px;
+    float: left;
+  }
+
+  header > nav {
+    width: 1050px; height: 100px;
+    float: left;
+  }
+  
+     header > nav > ul > li {
+      width: 350px; height: 100px;
+      float: left;
+      text-align: center;
+     }
+      header > nav > ul > li > a {
+        padding: 34px 0 34px 0;
+        display: block;
+      }
+
+  #wrap {
+    width: 1200px; height: 1000px;
+    margin: 0 auto;
+  }
+
+  header {
+    width: 1200px; height: 100px;
+  }
+/* 헤더 메뉴 */
+#topmenu {
+  height: 60px;
+}
+#topmenu > li {
+  float: left;
+  position: relative;
+}
+#topmenu > li > a {
+  display: block;   /* 링크 태그 블록 스타일 */
+  color: black;   /* 폰트 색상 */
+  font-weight: 600; /* 폰트 굵기 */
+}
+#topmenu > li > a:hover {
+  color: blue;
+}
+/* 서브 메뉴 */
+#topmenu > li > ul {
+  display: none;
+  position: absolute;
+  width: 348px;
+  left: 28px;
+  /* 배경색 투명하게 */
+  background-color: rgb(181,142,49,0.9);
+  left: 0;
+  margin: 0;
+}
+  #topmenu > li > ul > li {
+    padding: 10px 10px 10px 10px;
+  }
+  #topmenu > li > ul > li > a {
+    font-size: 24px;
+    padding: 15px 115px 15px 115px;
+    color: black;
+  }
+  #topmenu > li:hover > ul {
+    display: block;
+    z-index: 10px; /* 슬라이드 이미지 위에 표시 */
+  }
+  #topmenu > li > ul > li > a:hover {
+    color: wheat;
+  }
+    /* 메인 */
+  main {
+    width: 1200px; height: 600px;
+  }
+
+  /* 탭 메뉴 */
+  #tabMenu{
+    width: 897px; height: 600px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    float: left;
+}
+#tabMenu input[type="radio"]{
+    display: none;
+}
+#tabMenu label{
+      width: 297px; height: 100px;
+      border: 1px solid black;
+      float: left;
+      line-height: 100px;
+      text-align: center;
+}
+#tabMenu label:hover{
+    background-color: #eee;
+    cursor: pointer;
+}
+#tabMenu input:checked+label{
+    color: #b00;
+    border: 1px solid #ddd;
+    background-color: #eee;
+}
+.tab{
+    display: none;
+    border-top:1px solid #ddd;
+    text-align: center; 
+}
+.tab >ul >li >img{
+    border-radius: 10%;
+}
+.tab > ul > li > .caption {
+  position: absolute;
+  width: 250px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.463);
+  border-radius: 20%;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  z-index: 10;
+}
+.tab > ul > li:hover > .caption {
+  opacity: 1;
+  transform: translateY(-57px); /* 설명글 위치 */
+}
+.caption p {  /*캡션 텍스트 옵션 설정 */
+  font-size: 18px;
+  color: aliceblue;
+  text-align: center;
+  line-height: 50px;
+}
+#capcenter {
+  margin: 0 0 0 2px;
+}
+#noodle > ul > li{
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+}
+p{
+    font-size: 19px;
+}
+#rice > ul > li {
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+    margin-top: 140px;
+}
+#juice > ul > li {
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+    margin-top: 100px;
+}
+#tab1:checked~#noodle,
+#tab2:checked~#rice,
+#tab3:checked~#juice{
+    display: block;
+}
+
+#basket{
+    width: 299px; height: 600px;
+    border-bottom: none;
+    float: left;
+    text-align: center;
+    position: relative;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+}
+
+#basket > h1 {
+  margin-top: 30px;
+}
+
+#basket > #order {
+  margin-top: 30px;
+}
+
+#total {
+position: absolute;
+bottom: 50px;
+left: 110px;
+}
+
+#on {
+ position: absolute;
+ left: 0px;
+ bottom: 0px;
+ width: 150px;
+}
+
+#off {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 150px;
+}
+
+div > ul > li > p > button {
+  width: 50px;
+}
+
+footer {
+  width: 1200px; height: 100px;
+  text-align: center;
+  background-color: rgb(181,142,49,0.9);
+}
+footer > div { 
+  float: right;
+  transform: translate(-15px,-45px);
+}
+footer > div > img {
+  width: 70px; height: 70px;
+}
