@@ -11,7 +11,7 @@ body {
   background-image: url('../img/back.png');
 }
 
-@media(max-width:1280px){ 
+@media(min-width:769px){ 
   #logo {
     width: 150px; height: 100px;
     float: left;
@@ -337,7 +337,7 @@ footer > div > img {
 }
 .tab >ul >li >img{
     border-radius: 10%;
-    width: 100px;
+    width: 180px;
 }
 .tab > ul > li > .caption {
   position: absolute;
@@ -347,14 +347,14 @@ footer > div > img {
   border-radius: 20%;
   opacity: 0; 
   transition: all 0.6s ease-in-out;
-  z-index: 10;
+  z-index:10;
 }
 .tab > ul > li:hover > .caption {
   opacity: 1;
   transform: translateY(-57px); /* 설명글 위치 */
 }
 .caption p {  /*캡션 텍스트 옵션 설정 */
-  font-size: 12px;
+  font-size:12px;
   color: aliceblue;
   text-align: center;
   line-height: 50px;
@@ -363,6 +363,7 @@ footer > div > img {
   margin: 0 0 0 2px;
 }
 #noodle > ul > li{
+    position: relative;
     display: inline-block;
     margin: 20px;
     cursor: pointer;
@@ -371,11 +372,13 @@ p{
     font-size: 12px;
 }
 #rice > ul > li {
+    position: relative;
     display: inline-block;
     margin: 20px;
     cursor: pointer;
 }
 #juice > ul > li {
+    position: relative;
     display: inline-block;
     margin: 20px;
     cursor: pointer;
@@ -435,7 +438,7 @@ left: 42.5%;
 }
 
 div > ul > li > p > button {
-  width: 50px;
+  width: 30px;
 }
 
 footer {
